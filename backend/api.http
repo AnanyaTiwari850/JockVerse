@@ -1,0 +1,86 @@
+POST http://localhost:9090/register 
+Content-Type: application/json
+
+
+{
+    "username" :"abc",
+    "password" :"123",
+    "email" :"abc@gmail.com",
+    "name":"ABC"
+}
+
+
+###
+POST http://localhost:9090/register 
+Content-Type: application/json
+
+
+{
+    "username" :"rahul1",
+    "password" :"123",
+    "email" :"rahul@gmail.com",
+    "name":"Rahul"
+}
+
+###
+
+POST http://localhost:9090/login
+Content-Type: application/json
+
+
+{
+    "email":"abc@gmail.com",
+    "password": "123"
+}
+
+
+###
+POST http://localhost:9090/login
+Content-Type: application/json
+
+
+{
+    "email":"rahul@gmail.com",
+    "password": "a"
+}
+
+###
+
+GET http://localhost:9090/get_user_and_profile
+Content-Type: application/json
+
+
+{
+    "token":"51fcaaa5e132e032d61b3908ef5405a2215678dab7e98d27879562d7cfdde582"
+}
+
+
+###
+
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+    "token":"5b16c9a0fd47b83a24f08fb39aaa16051de8def1023981bebe0057ae391ff0f6",
+    "bio": "",
+    "currentPost": "CTO",
+    "pastWork": [
+        {
+            "company": "Microsoft",
+            "position": "CTO",
+            "years": "2"
+        }
+    ],
+    "education": [
+        {
+            "school": "IIT",
+            "degree": "B.Tech",
+            "fieldOfStudy": "computer Science"
+        }
+    ]
+}
+
+###
+
+GET http://localhost:9090/user/get_all_users
+Content-Type: application/json
